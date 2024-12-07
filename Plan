@@ -1,0 +1,9 @@
+Bir Araç Kiralama sistemi yapacağım. Araçlar için bir class belirleyeceğim, bu classın altında belli miktarda nesne(araç) oluşturacağım. Programım çalıştıralacağı zaman öncelikle bizi bir kaç satır karşılayacak bu satırlar programın ne işe yarayağını anlatacak, bu satıların altında bizi dört durum karşılayacak, 1 = araç kiralama, 2 = tüm araçlar, 3 = kiralanmaya uygun araçlar, 4 = sistemden çıkış.
+
+Eğer kullanıcı input bloğuna 1 yazar ise onu başka bir input bloğu karşılayacak, kullanıcı öncelikle bir araç markası belirtsin, sonrasında bu girdiği markanın bir modelini aratsın, bunun sonucunda eğer böyle bir araç sisteme kayıtlı ise aracın adı, kira fiyatı, kiralanabilirlik durumu ve eğer kiralanabilir değil ise tahminen ne zaman kiralanabilir olacağına dair bilgiler kullanıcıya gösterilsin.Ancak tüm markaların kendi modellerini barındırdığı listelere ihtiyacımız olacak. 
+
+Eğer kullanıcı input bloğuna 2 yazar ise oluşturduğumuz tüm nesneler(araçlar) kullanıcıya gösterilsin.
+
+Eğer kullanıcı input bloğuna 3 yazar ise ilgili özelliği sadece "kiralanabilir" olan araçlar gösterilsin.
+
+Kullanıcının input bloğuna 4 yazması durumunda kodumuzun düzgün bir şekilde çalışabilmesi için main fonksiyonumuzu while döngüsü içine alacağız ve 4 sayısı yazıldığı zamasn döngü kırılacak. Böylece hem sürekli çalışan hem de kullanıcının istediği zaman çıkabileceği bir uygulama kodlamış olacağız.
