@@ -56,6 +56,9 @@ arac9 = Araclar("BMW", "BMW i5", 4500, "Kullanilabilir", "-")
 
 arac10 = Araclar("Bugatti", "Bugatti Chiron 8.0", 15000, "Kullanilabilir", "-")
 
+aracListe = [arac1, arac2, arac3, arac4, arac5, arac6, arac7, arac8, arac9, arac10]
+
+# Functions
 def main():
     while True:
         print("\b")
@@ -76,15 +79,53 @@ def main():
             break
 
 def aracKiralama():
-    gir = input("Lütfen aratmak istediğiniz aracın markasını giriniz.")
+    gir = input("Lütfen aratmak istediğiniz aracın markasını giriniz: ")
     
     if gir == "Volvo":
         print(volvo)
-        gir2 = input("Lütfen sıralanan modellerden birini aratınız.")
-        if gir2 == "Volvo XC90":
-            print(f"aradığınız araç bulundu: {arac1.model}, aracın günlük fiyatı: {arac1.fiyat}, aracın kiralanabilirlik durumu: {arac1.kira}")
-            if arac1.kira == "kullanilamaz":
-                print(f"Araç şu süreden sonra kullanılabilir olacak: {arac1.tahmin}")
+        gir2 = input("Lütfen listelenen modellerden birini giriniz: ")
+        for arac in aracListe:
+            if gir2 == arac.model:
+                print(f"Aradığınız araç blundu")
+                print(f"Araç: {arac.model}, aracın günlük fiyatı: {arac.fiyat}, aracin kiralanabilirlik durumu: {arac.kira}")
+                if arac.kira == "kullanilamaz":
+                    print(f"Aracın tahmini olarak kullanıma açılma süresi: {arac.tahmin}")
+    elif gir == "BMW":
+        print(bmw)
+        gir2 = input("Lütfen listelenen modellerden birini giriniz: ")
+        for arac in aracListe:
+            if gir2 == arac.model:
+                print(f"Aradığınız araç blundu")
+                print(f"Araç: {arac.model}, aracın günlük fiyatı: {arac.fiyat}, aracin kiralanabilirlik durumu: {arac.kira}")
+                if arac.kira == "Kullanilamaz":
+                    print(f"Aracın tahmini olarak kullanıma açılma süresi: {arac.tahmin}")
+    elif gir == "Audi":
+        print(audi)
+        gir2 = input("Lütfen listelenen modellerden birini giriniz: ")
+        for arac in aracListe:
+            if gir2 == arac.model:
+                print(f"Aradığınız araç blundu")
+                print(f"Araç: {arac.model}, aracın günlük fiyatı: {arac.fiyat}, aracin kiralanabilirlik durumu: {arac.kira}")
+                if arac.kira == "Kullanilamaz":
+                    print(f"Aracın tahmini olarak kullanıma açılma süresi: {arac.tahmin}")
+    elif gir == "Renault":
+        print(renault)
+        gir2 = input("Lütfen listelenen modellerden birini giriniz: ")
+        for arac in aracListe:
+            if gir2 == arac.model:
+                print(f"Aradığınız araç blundu")
+                print(f"Araç: {arac.model}, aracın günlük fiyatı: {arac.fiyat}, aracin kiralanabilirlik durumu: {arac.kira}")
+                if arac.kira == "Kullanilamaz":
+                    print(f"Aracın tahmini olarak kullanıma açılma süresi: {arac.tahmin}")
+    elif gir == "Bugatti":
+        print(bugatti)
+        gir2 = input("Lütfen listelenen modellerden birini giriniz: ")
+        for arac in aracListe:
+            if gir2 == arac.model:
+                print(f"Aradığınız araç blundu")
+                print(f"Araç: {arac.model}, aracın günlük fiyatı: {arac.fiyat}, aracin kiralanabilirlik durumu: {arac.kira}")
+                if arac.kira == "Kullanilamaz":
+                    print(f"Aracın tahmini olarak kullanıma açılma süresi: {arac.tahmin}")
 
 def genelAraclar():
     tumAraclar.sort()
